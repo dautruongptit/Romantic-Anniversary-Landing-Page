@@ -6,21 +6,52 @@ export function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
+  const togglePlay = async () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      try {
+        await audioRef.current.play();
+        setIsPlaying(true);
+      } catch (err) {
+        console.log("Play blocked by browser");
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
+  // 🎯 AUTO PLAY khi vào page
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.3;
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.3;
+
+    const autoPlay = async () => {
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch (err) {
+        console.log("Autoplay blocked → waiting user interaction");
+
+        // fallback: click lần đầu
+        const handleFirstClick = async () => {
+          try {
+            await audio.play();
+            setIsPlaying(true);
+          } catch (e) {}
+
+          window.removeEventListener("click", handleFirstClick);
+          
+        };
+
+        window.addEventListener("click", handleFirstClick);
+      }
+    };
+
+    autoPlay();
   }, []);
 
   return (
@@ -30,11 +61,9 @@ export function MusicPlayer() {
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center gap-4 py-12"
     >
-      <audio
-        ref={audioRef}
-        loop
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-      />
+    <audio ref={audioRef} loop>
+      <source src="/audio/Westlife-My-Love.mp3" type="audio/mpeg" />
+    </audio>
 
       <motion.button
         whileHover={{ scale: 1.05 }}
@@ -47,9 +76,11 @@ export function MusicPlayer() {
         ) : (
           <Play className="text-white" size={24} />
         )}
-        <span className="text-white" style={{ fontFamily: 'var(--font-display)' }}>
+
+        <span className="text-white" style={{ fontFamily: "var(--font-display)" }}>
           {isPlaying ? "Pause Our Song" : "▶ Play Our Song ❤️"}
         </span>
+
         <Music2 className="text-white" size={20} />
       </motion.button>
 
@@ -60,7 +91,9 @@ export function MusicPlayer() {
           className="flex items-center gap-2 text-pink-400"
         >
           <Music2 size={16} className="animate-pulse" />
-          <span className="text-sm" style={{ fontFamily: 'var(--font-body)' }}>Now Playing...</span>
+          <span className="text-sm" style={{ fontFamily: "var(--font-body)" }}>
+            Now Playing...
+          </span>
         </motion.div>
       )}
     </motion.div>

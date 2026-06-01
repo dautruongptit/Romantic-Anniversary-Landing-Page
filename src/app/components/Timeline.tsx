@@ -19,37 +19,47 @@ const events: TimelineEvent[] = [
     title: "Tin Nhắn Đầu Tiên",
     description: "Dòng tin nhắn đầu tiên bắt đầu câu chuyện của chúng ta",
     icon: <MessageCircle className="text-blue-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop&auto=format"
+    imageUrl: "/images/20231105-1.png"
+
   },
   {
     date: "26/01/2024",
     title: "Gặp Lần Đầu",
     description: "Khoảnh khắc định mệnh, khi mắt anh chạm mắt em",
     icon: <Sparkles className="text-pink-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop&auto=format"
+    imageUrl: "/images/20240126-1.png" 
   },
+  
   {
-    date: "20/03/2024",
-    title: "Lần Đầu Qua Phòng Ôm Ngủ",
-    description: "Đêm đầu tiên được ôm em trong vòng tay",
-    icon: <Home className="text-purple-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop&auto=format"
-  },
-  {
-    date: "22/03/2024",
+    date: "19/03/2024",
     title: "Lần Đầu Nấu Mì Cho Em",
     description: "Bát mì đơn giản nhưng đầy yêu thương",
     icon: <Coffee className="text-orange-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop&auto=format"
+    imageUrl: "/images/20241903-1.jpg"
+  },
+  {
+    date: "21/03/2024",
+    title: "Lần Đầu Qua Phòng Ôm Ngủ",
+    description: "Đêm đầu tiên được ôm em trong vòng tay",
+    icon: <Home className="text-purple-400" size={24} />,
+    imageUrl: "/images/20242103-1.jpg"
   },
   {
     date: "06/04/2024",
-    title: "Lần Đầu Uống Rượu Cùng Nhau",
+    title: "Lần Đầu Uống Rượu Cùng Nhau Ở Phòng Em",
     description: "Những câu chuyện và tiếng cười bên ly rượu",
     icon: <Wine className="text-red-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&h=600&fit=crop&auto=format"
+    imageUrl: "/images/20240406-1.jpg"
   },
+ 
   {
+    date: "03/08/2024",
+    title: "Ngày Tỏ Tình",
+    description: "Ngày anh chính thức nói 'Anh có tình cảm với em' ❤️",
+    icon: <Star className="text-yellow-400 fill-yellow-400" size={24} />,
+    imageUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop&auto=format"
+  },
+   {
     date: "02/06/2024",
     title: "Đồng Ý Làm Người Yêu",
     description: "Ngày em nói 'Em đồng ý' - ngày chính thức bắt đầu 💕",
@@ -57,18 +67,11 @@ const events: TimelineEvent[] = [
     imageUrl: "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop&auto=format"
   },
   {
-    date: "03/08/2024",
-    title: "Ngày Tỏ Tình",
-    description: "Ngày anh chính thức nói 'Anh yêu em' ❤️",
-    icon: <Star className="text-yellow-400 fill-yellow-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop&auto=format"
-  },
-  {
     date: "20/05/2026",
-    title: "Chuyến Đi Đà Nẵng",
+    title: "Chuyến Đi Đà Nẵng của chúng ta",
     description: "Kỷ niệm tuyệt vời tại thành phố biển 🌊",
     icon: <Calendar className="text-purple-400" size={24} />,
-    imageUrl: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=600&fit=crop&auto=format"
+    imageUrl: "/images/20260521-1.jpg"
   }
 ];
 

@@ -9,23 +9,31 @@ interface Photo {
 
 const photos: Photo[] = [
   {
-    url: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop&auto=format",
+    url: "/images/1.jpg",
     caption: "Khoảnh khắc đầu tiên bên nhau ❤️"
   },
   {
-    url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop&auto=format",
+     url: "/images/2.JPG",
     caption: "Chuyến du lịch đáng nhớ 🌅"
   },
   {
-    url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop&auto=format",
+     url: "/images/3.jpg",
     caption: "Những buổi tối bên nhau ✨"
   },
   {
-    url: "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?w=800&h=600&fit=crop&auto=format",
+    url: "/images/4.jpg",
     caption: "Mỗi ngày bên em đều đặc biệt 💕"
   },
   {
-    url: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&h=600&fit=crop&auto=format",
+    url: "/images/6.jpg",
+    caption: "Yêu em từng giây phút 💖"
+  },
+  {
+    url: "/images/7.JPG",
+    caption: "Yêu em từng giây phút 💖"
+  },
+  {
+    url: "/images/5.JPG",
     caption: "Yêu em từng giây phút 💖"
   }
 ];
