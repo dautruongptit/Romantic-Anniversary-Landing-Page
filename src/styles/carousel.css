@@ -1,0 +1,65 @@
+/* Slick Carousel Custom Styling */
+.slick-dots {
+  bottom: -50px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: #E8B4D0 !important;
+  opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #E8B4D0 !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 10 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px !important;
+  color: #E8B4D0 !important;
+  opacity: 0.7 !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  left: 20px !important;
+}
+
+.slick-next {
+  right: 20px !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #FFF5F8;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #E8B4D0;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #D8A9C8;
+}
